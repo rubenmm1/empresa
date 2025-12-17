@@ -9,6 +9,16 @@ export async function buscarPorEmail(email){
     return rows[0];
 }
 
+export async function buscarPorId(id) {
+  const [rows] = await pool.query(
+    'SELECT id, nombre, email, nif, telefono, especialidad FROM jefes WHERE id = ?',
+    [id]
+  );
+
+  return rows[0];
+}
+
+
 
 export async function crearJefe({ nombre, email, nif, telefono, especialidad, password }) {
   const [result] = await pool.query(
@@ -26,3 +36,6 @@ export async function crearJefe({ nombre, email, nif, telefono, especialidad, pa
     especialidad
   };
 }
+
+ 
+ 

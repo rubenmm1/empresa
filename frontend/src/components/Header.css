@@ -1,0 +1,39 @@
+.header {
+  height: 64px;
+  background-color: #181818; /* MÁS OSCURO */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 36px;
+}
+
+.page-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.logout-button {
+  background-color: #5b21b6;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #6d28d9;
+}

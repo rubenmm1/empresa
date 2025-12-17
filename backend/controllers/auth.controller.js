@@ -29,7 +29,7 @@ export async function login(req, res) {
    
     // Generar token
     const token = jwt.sign(
-      { cliente_id: usuario.id },
+      { id: usuario.id },
       process.env.JWT_SECRET,
       { expiresIn: '24h' }
     );
@@ -41,7 +41,10 @@ export async function login(req, res) {
       usuario: {
         id: usuario.id,
         nombre: usuario.nombre,
-        email: usuario.email
+        email: usuario.email,
+        nif: usuario.nif,
+        telefono:usuario.telefono,
+        especialidad:usuario.especialidad
       }
     });
    
@@ -86,7 +89,7 @@ export async function register(req, res) {
     
     // Generar token
     const token = jwt.sign(
-      { cliente_id: nuevoUsuario.insertId },
+      { id: nuevoUsuario.insertId },
       process.env.JWT_SECRET,
       { expiresIn: '24h' }
     );
@@ -113,4 +116,27 @@ export async function register(req, res) {
     });
   }
 }
+
+
+export async function me(req, res) {
+  try {
+    const usuario = await jefesModel.buscarPorId(req.usuario.id);
+
+    if (!usuario) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+
+    res.json({
+      id: usuario.id,
+      nombre: usuario.nombre,
+      email: usuario.email,
+      nif: usuario.nif,
+      telefono: usuario.telefono,
+      especialidad: usuario.especialidad
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Error interno' });
+  }
+}
+
 

@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "header header"
+    "aside content";
+  height: 100vh;
+}
+
+/* ÁREAS */
+.header {
+  grid-area: header;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.content {
+  grid-area: content;
+  background-color: #242424;
+  padding: 2rem;
+  overflow-y: auto;
+}
