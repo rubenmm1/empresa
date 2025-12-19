@@ -1,0 +1,128 @@
+/* Contenedor principal */
+.proyectos-container {
+  padding: 2rem;
+  color: #eaeaea;
+}
+
+/* Título principal */
+.proyectos-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de nuevo proyecto */
+.btn-primary {
+  margin-bottom: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Formulario de creación/edición */
+.proyecto-form {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.proyecto-form input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-success {
+  padding: 0.6rem 1rem;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+.btn-cancel {
+  padding: 0.6rem 1rem;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Grid de proyectos */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card de cada proyecto */
+.proyecto-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proyecto-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-card p {
+  margin: 0.3rem 0;
+}
+
+/* Acciones dentro de la card */
+.proyecto-card .form-actions {
+  margin-top: 1rem;
+}
+
+.proyecto-card button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.proyecto-card button:hover {
+  opacity: 0.9;
+}
+
+.proyecto-card button:first-child {
+  background-color: #ffc107; /* Editar */
+  margin-right: 0.5rem;
+}
+
+.proyecto-card button:last-child {
+  background-color: #dc3545; /* Eliminar */
+}

@@ -16,16 +16,9 @@ function Header() {
     const path = location.pathname;
 
     if (path.includes("inicio")) return "Inicio";
-    if (path.includes("empleados/crear")) return "Creación de empleado";
-    if (path.includes("empleados/modificar")) return "Modificación de empleado";
-    if (path.includes("empleados/ver")) return "Listado de empleados";
-    if (path.includes("empleados/eliminar")) return "Eliminar empleado";
+    if (path.includes("empleados")) return "Panel de empleados";
 
-    if (path.includes("proyectos/crear")) return "Creación de proyecto";
-    if (path.includes("proyectos/modificar")) return "Modificación de proyecto";
-    if (path.includes("proyectos/ver")) return "Listado de proyectos";
-    if (path.includes("proyectos/eliminar")) return "Eliminar proyecto";
-
+    if (path.includes("proyectos")) return "Panel de proyectos";
     return "Panel";
   };
 

@@ -6,7 +6,8 @@ import cors from 'cors';
 
 // Importar rutas del sistema
 import authRoutes from './routes/auth.routes.js';
-import empleadosRoutes from './routes/empleados.routes.js'
+import empleadosRoutes from './routes/empleados.routes.js';
+import proyectosRoutes from './routes/proyectos.routes.js';
 
 
 const app = express();
@@ -62,6 +63,7 @@ app.get('/', (req, res) => {
 // Rutas de la API
 app.use('/api/auth', authRoutes);
 app.use('/api/empleados', empleadosRoutes);
+app.use('/api/proyectos', proyectosRoutes);
 
 // ==========================================
 // MANEJO DE ERRORES
