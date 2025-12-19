@@ -1,0 +1,61 @@
+.empleados-container {
+  padding: 2rem;
+  color: #eaeaea;
+}
+
+.empleados-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  margin-bottom: 1.5rem;
+}
+
+.empleado-form {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.empleado-form input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.empleados-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.empleados-table th,
+.empleados-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.empleados-table th {
+  background: #262626;
+}
+
+.empleados-table tr:nth-child(even) {
+  background: #222;
+}
+
+.empleados-table button {
+  margin-right: 0.5rem;
+}

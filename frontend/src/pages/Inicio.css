@@ -1,0 +1,49 @@
+.inicio-container {
+  padding: 2rem;
+  color: #eaeaea;
+}
+
+.inicio-title {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.inicio-title span {
+  color: #9bbcff;
+}
+
+.inicio-card {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 14px;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.inicio-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.inicio-list {
+  list-style: none;
+  padding: 0;
+}
+
+.inicio-list li {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #dddddd;
+}
+
+.inicio-list strong {
+  color: #ffffff;
+}
+
+.inicio-loading,
+.inicio-error {
+  font-size: 1.4rem;
+  color: #cccccc;
+}

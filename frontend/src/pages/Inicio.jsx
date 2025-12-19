@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { authFetch } from "../utils/authFetch";
+import "./Inicio.css";
 
 function Inicio() {
   const [jefe, setJefe] = useState(null);
@@ -21,21 +22,23 @@ function Inicio() {
   }, []);
 
   if (loading) {
-    return <p>Cargando datos...</p>;
+    return <p className="inicio-loading">Cargando datos...</p>;
   }
 
   if (!jefe) {
-    return <p>No se pudieron cargar los datos del usuario.</p>;
+    return <p className="inicio-error">No se pudieron cargar los datos del usuario.</p>;
   }
 
   return (
-    <div>
-      <h1>👋 Bienvenido, {jefe.nombre}</h1>
+    <div className="inicio-container">
+      <h1 className="inicio-title">
+        👋 Bienvenido, <span>{jefe.nombre}</span>
+      </h1>
 
-      <section style={{ marginTop: "2rem" }}>
+      <section className="inicio-card">
         <h2>Datos del jefe</h2>
 
-        <ul>
+        <ul className="inicio-list">
           <li>
             <strong>Email:</strong> {jefe.email}
           </li>

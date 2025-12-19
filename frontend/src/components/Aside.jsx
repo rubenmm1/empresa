@@ -1,70 +1,36 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Aside.css";
 
 function Aside() {
-  const [openProyectos, setOpenProyectos] = useState(false);
-  const [openEmpleados, setOpenEmpleados] = useState(false);
-
   return (
     <aside className="aside">
-      <h2 className="aside-title">Empresa</h2>
-
       <nav className="aside-nav">
-        {/* INICIO */}
-        <NavLink to="/inicio" className="nav-item">
-          Inicio
+        <NavLink
+          to="/inicio"
+          className={({ isActive }) =>
+            isActive ? "aside-link active" : "aside-link"
+          }
+        >
+          🏠 Inicio
         </NavLink>
 
-        {/* PROYECTOS */}
-        <button
-          className="nav-item nav-button"
-          onClick={() => setOpenProyectos(!openProyectos)}
+        <NavLink
+          to="/empleados"
+          className={({ isActive }) =>
+            isActive ? "aside-link active" : "aside-link"
+          }
         >
-          Proyectos
-        </button>
+          👥 Empleados
+        </NavLink>
 
-        {openProyectos && (
-          <div className="submenu">
-            <NavLink to="/proyectos/crear" className="submenu-item">
-              Crear
-            </NavLink>
-            <NavLink to="/proyectos/modificar" className="submenu-item">
-              Modificar
-            </NavLink>
-            <NavLink to="/proyectos/ver" className="submenu-item">
-              Ver
-            </NavLink>
-            <NavLink to="/proyectos/eliminar" className="submenu-item">
-              Eliminar
-            </NavLink>
-          </div>
-        )}
-
-        {/* EMPLEADOS */}
-        <button
-          className="nav-item nav-button"
-          onClick={() => setOpenEmpleados(!openEmpleados)}
+        <NavLink
+          to="/proyectos"
+          className={({ isActive }) =>
+            isActive ? "aside-link active" : "aside-link"
+          }
         >
-          Empleados
-        </button>
-
-        {openEmpleados && (
-          <div className="submenu">
-            <NavLink to="/empleados/crear" className="submenu-item">
-              Crear
-            </NavLink>
-            <NavLink to="/empleados/modificar" className="submenu-item">
-              Modificar
-            </NavLink>
-            <NavLink to="/empleados/ver" className="submenu-item">
-              Ver
-            </NavLink>
-            <NavLink to="/empleados/eliminar" className="submenu-item">
-              Eliminar
-            </NavLink>
-          </div>
-        )}
+          📁 Proyectos
+        </NavLink>
       </nav>
     </aside>
   );
