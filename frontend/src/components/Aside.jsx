@@ -31,6 +31,17 @@ function Aside() {
         >
           📁 Proyectos
         </NavLink>
+
+
+
+        <NavLink
+          to="/asignacion"
+          className={({ isActive }) =>
+            isActive ? "aside-link active" : "aside-link"
+          }
+        >
+          ⏩ Asignación
+        </NavLink>
       </nav>
     </aside>
   );

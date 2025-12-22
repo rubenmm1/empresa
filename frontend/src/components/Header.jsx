@@ -17,8 +17,8 @@ function Header() {
 
     if (path.includes("inicio")) return "Inicio";
     if (path.includes("empleados")) return "Panel de empleados";
-
     if (path.includes("proyectos")) return "Panel de proyectos";
+    if (path.includes("asignacion")) return "Panel de asignaciones";
     return "Panel";
   };
 

@@ -4,6 +4,7 @@ import Inicio from "./pages/Inicio.jsx";
 import Layout from "./components/Layout.jsx";
 import Empleados from "./pages/Empleados.jsx";
 import Proyectos from "./pages/Proyectos.jsx";
+import Asignacion from "./pages/Asignacion.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/empleados" element={<Empleados />} />
         <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/asignacion" element={<Asignacion />} />
       </Route>
     </Routes>
   );
