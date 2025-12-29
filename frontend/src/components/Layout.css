@@ -20,6 +20,9 @@
 .content {
   grid-area: content;
   background-color: #242424;
+
+  position: relative;
   padding: 2rem;
+  padding-bottom: 140px; /* espacio para el footer */
   overflow-y: auto;
 }
